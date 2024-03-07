@@ -9,6 +9,8 @@
     working with your local file system, opening files, reading files, deleting files,
     these are all things which are not possible in the browser, you can't access your local filesystem in the browser for security reasons, so this is not supported.
     **` Nodejs `** adds these features to  ` v8'`s engine 
+     
+    * node js not only for server *
 ### V8 Engine
 
 *   Google-developed, open-source JavaScript engine
@@ -22,6 +24,9 @@
 ### Java Script on Server Side
 
 ![alt text](image-1.png)
+![alt text](image-3.png)
+![alt text](image-2.png)
+
 
 
 
