@@ -1,13 +1,22 @@
-const express = require('express')
-const router = express.Router()
-const path=require('path')
-const rootDir=require('../utils/path')
+const path = require('path');
 
-router.get('/',(req,res,next)=>{
-    console.log('In the middleware2')
+const express = require('express');
 
-    // res.send('<h1>Middle ware</h1>')
-    res.sendFile(path.join(rootDir,'views','shop.html'))
-})
+const rootDir = require('../utils/path');
+const adminData = require('./admin');
 
-module.exports=router
+const router = express.Router();
+
+router.get('/', (req, res, next) => {
+  const products = adminData.products;
+  res.render('shop', {
+    prods: products,
+    pageTitle: 'Shop',
+    path: '/',
+    hasProducts: products.length > 0,
+    activeShop: true,
+    productCSS: true
+  });
+});
+
+module.exports = router;
